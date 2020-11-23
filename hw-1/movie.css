@@ -87,3 +87,14 @@ body {
     background-color: #ffffff;
 }
 
+.MainBody_conteiner_Right
+{    
+    background-color: #A2B964;
+    position:relative;
+    float:right;
+    top:-1477px;
+    right:0;
+    width: 30%;
+    height:1500px;
+}
+
