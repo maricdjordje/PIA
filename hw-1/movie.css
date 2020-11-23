@@ -97,4 +97,9 @@ body {
     width: 30%;
     height:1500px;
 }
+.RightText{
+    margin:  auto;
+    font-weight: bold;
+    text-align: left;    
+}
 
