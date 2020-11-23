@@ -2,5 +2,9 @@ body {
     background-image:url('images/background.png');
     <!-- background-repeat: no-repeat; -->
     background-attachment: fixed;   <!-- ovo znaci da je uvek fiksno -->
-    background-size: 100% 100%;
+    /*background-size: 50%;*/
+    max-width: 55%;
+    
+    margin: auto;
+    
 }
