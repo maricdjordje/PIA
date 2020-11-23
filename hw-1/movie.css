@@ -51,3 +51,39 @@ body {
     height:83px;
     background-image: url("images/freshbig.png");
 }
+
+.box{
+    width: 70%;
+    
+}
+
+.percentage {
+    color: red;
+    position:relative;
+    text-align: center;
+    font-size:  50pt;
+    padding-top: 5px;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: "Time New Roman", serif;
+}
+
+.critic {
+    font-size: 12;
+    font-family: 'Time New Roman',serif;
+    width: 90%;    
+    margin: 1rem auto;
+}
+
+
+.quotebubble {
+    font-size: 12pt;
+    font-family: 'Times New Roman', serif;
+    border: 2px solid #cccccc;
+    border-radius: 12px;
+    padding: 1px;
+    margin:  auto;
+    width: 90%;
+    background-color: #ffffff;
+}
+
