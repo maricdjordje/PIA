@@ -8,3 +8,46 @@ body {
     margin: auto;
     
 }
+* h1{
+    text-align: center;
+    text-shadow: 5px 5px #999999;
+    font-family: "Georgia";
+    font-weight: bold;
+    padding:5px;
+    font-size: 24pt;
+    background: 
+}
+
+.MainBody_conteiner {
+    position: relative;
+    width: 55%;    
+    margin: auto;
+    border-width: 5px 5px 5px 5px;
+    border-style: solid;
+    background: #EEEEEE;
+    border-color: #999999;
+}
+
+.MainBody_conteiner_Top
+{
+    width: 70%;
+    height: 80px;
+    float:left;
+    position:relative;
+    margin-bottom: 1rem;
+}
+
+.MainBody_conteiner_TopBanner {
+    position:relative;
+    height:83px;
+    margin-bottom: 0px;
+    background-image: url("images/rbg.png");
+}
+
+.MainBody_conteiner_TopLeft_Picture {
+    position:relative;
+    top: -83px;
+    width:100px;
+    height:83px;
+    background-image: url("images/freshbig.png");
+}
