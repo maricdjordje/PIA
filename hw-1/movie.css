@@ -102,4 +102,15 @@ body {
     font-weight: bold;
     text-align: left;    
 }
+footer {
+    background-color: #A2B964;
+    padding: 0.5em;
+    text-align: center;
+    margin: 0px;
+    margin-top: 0px;
+}
+.w3c{
+    padding-left: 600px;
+}
+
 
