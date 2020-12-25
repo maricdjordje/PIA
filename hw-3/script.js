@@ -62,3 +62,21 @@ function init() {
     playQuiz(itPitanja);
   });
 }
+
+
+function clearDetails() {
+  mainEl.innerHTML = "";
+}
+
+function reset() {
+  quizType = "";
+  score = 0;
+
+  gameDuration = 0;
+  gameSecElapsed = 0;
+  gameInterval;
+
+  questionDuration = 20;
+  questionSecElapsed = 0;
+  questionInterval;
+}
