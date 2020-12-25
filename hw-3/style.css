@@ -1,1 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+body {
+ 
+  background-image: url('pozadina.jpg');
+
+  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+
+  
+  padding-top: 90px;
+}
+
+button {
+  margin: 1em;
+}
