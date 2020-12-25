@@ -267,3 +267,74 @@ function stopTime() {
   questionSeconds = 0;
   clearInterval(gameInterval);
 }
+
+
+function endOfGame() {
+  if (test) { console.log("--- endOfGame ---"); }
+  stopTime();
+  clearDetails();
+
+  timerTab.setAttribute("style", "visibility: hidden;");
+
+  let heading = document.createElement("p");
+  heading.setAttribute("id", "main-heading");
+  heading.textContent = "Kviz je završen!";
+
+  
+  let instructions = document.createElement("p");
+  instructions.setAttribute("id", "instructions");
+  instructions.textContent = " Vaš ostvareni rezultat je " + score; 
+
+  
+  let playAgain = document.createElement("button");
+  playAgain.setAttribute("id", "playAgain");
+  playAgain.setAttribute("class", "btn btn-secondary");
+  playAgain.textContent = "Igraj ponovo";
+
+  
+  let par = document.createElement("p");
+
+  let initialsLabel = document.createElement("label");
+  initialsLabel.setAttribute("for","userInitials");
+  initialsLabel.textContent = "Unesite prvih 5 slova vašeg imena: ";
+
+  let initialsInput = document.createElement("input");
+  initialsInput.setAttribute("id","userInitials");
+  initialsInput.setAttribute("name","userInitials");
+  initialsInput.setAttribute("minlength","3");
+  initialsInput.setAttribute("maxlength","30");
+  initialsInput.setAttribute("size","30");
+
+
+  mainEl.appendChild(heading);
+  mainEl.appendChild(instructions);
+  mainEl.appendChild(initialsLabel);
+  mainEl.appendChild(initialsInput);
+  mainEl.appendChild(par);
+  mainEl.appendChild(playAgain);
+
+  playAgain.addEventListener("click", init);
+
+    // cuva 10 najboljih rezultata i sortira od najveceg do najmanjeg
+  initialsInput.addEventListener("input", function() {
+    initialsInput.value = initialsInput.value.toUpperCase();
+    if ( initialsInput.value.length === 10 ) { 
+
+      
+      let thisScore = [ { type: quizType, name: initialsInput.value, score: score } ]; 
+
+      //uzima najveci rez iz memorije
+      let storedScores = JSON.parse(localStorage.getItem("highScores")); 
+      if (test) { console.log("storedScore",storedScores); }
+
+      if (storedScores !== null) { 
+        storedScores.push(thisScore[0]); 
+      } else {
+        storedScores = thisScore;
+      }
+
+      localStorage.setItem("highScores", JSON.stringify(storedScores));
+      highScores();
+    }
+  });
+}
