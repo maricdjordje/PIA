@@ -52,4 +52,54 @@ var opstaPitanja = [
 ];
 
 var itPitanja = [
-  ];
+  {
+    title: "Ko je tvorac WWW-a?",
+    choices: ["Tim Berners Li", "Linus Torvalds", "Stiv Džobs", "Stiv Voznijak"],
+    answer: "Tim Berners Li"
+  },
+  {
+    title: "Koja kompanija kreira alate Premier Pro i Illustrator",
+    choices: ["Apple", "Adobe", "Huawei", "Nokia"],
+    answer: "Adobe"
+  },
+  {
+    title: "Šta je od navedenog framework JavaScript-a?",
+    choices: ["Angular", "C++", "Scala", "Ruby"],
+    answer: "Angular"
+  },
+    {
+    title: "Šta je od navedenog proceduralni programski jezik",
+    choices: ["Pascal", "Python", "CSS", "SASS"],
+    answer: "Pascal"
+  },
+    {
+    title: "HTML je...",
+    choices: ["opisni (markup) jezik", "programski jezik"],
+    answer: "opisni (markup) jezik"
+  },
+    {
+    title: "Koji tag se koristi da bismo napisali css unutar html koda?",
+    choices: ["<h1>", "<pre>", "<style>", "<br>"],
+    answer: "<style>"
+  },
+    {
+    title: "Koji je jezik od navedenih objektno-orijentisan?",
+    choices: ["xHTML", "Bootstrap", "Java", "MySQL"],
+    answer: "Java"
+  },
+    {
+    title: "Koji dekadni broj binarno predstavljamo sa 1100",
+    choices: ["5", "12", "10", "16"],
+    answer: "12"
+  },
+    {
+    title: "Šta znači skraćenica LIFO kod stack-a?",
+    choices: ["Last In First Out", "Last Indeed First Out", "Last In First On", "Last Index First Out"],
+    answer: "Last In First Out"
+  },
+  {
+    title: "Skraćenica DOM označava?",
+    choices: ["Document Oats Model", "Document Object Model", "Document Online Model", "Direct Object Model"],
+    answer: "Document Object Model"
+  }
+]
