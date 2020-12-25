@@ -190,3 +190,33 @@ function scoreAnswer(cur) {
     
   }
 }
+
+
+function showAnswers(cur) {
+  if (test) { console.log("--- showAnswer ---"); }
+  
+  if (test) { console.log("sa qanda",cur);}
+  if (test) { console.log("sselected ",selectedItem);}
+
+
+  for (let i=0; i<cur.choices.length; i++) {
+    if (test) { console.log("sa in for ",i);}
+
+    let questid = "#questionNum-" + i;
+    
+    let questrow = document.querySelector(questid);
+
+    
+
+    if (test) { console.log("saf selected" + selectedItem + "<");}
+    if (test) { console.log("saf color test >" +  cur.choices[i] +"<");}
+
+    if ( cur.choices[i] !== cur.answer ) {
+      if (test) { console.log("color test flase");}
+      questrow.setAttribute("style","background-color: red");
+    } else {
+      if (test) { console.log("color test true");}
+      questrow.setAttribute("style","background-color: green");
+    }
+  }
+  
