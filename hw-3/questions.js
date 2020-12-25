@@ -1,1 +1,6 @@
+var opstaPitanja = [
+  
+  ];
 
+var itPitanja = [
+  ];
