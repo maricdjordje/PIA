@@ -220,3 +220,50 @@ function showAnswers(cur) {
     }
   }
   
+  setTimeout(presentQuestion,500);
+}
+
+
+function setGameTime() {
+  if (test) { console.log("--- setGameTime ---"); }
+  if (test) { console.log("gameDuration " + gameDuration); }
+  clearInterval(gameInterval);
+  gameSeconds = gameDuration;
+}
+
+
+function renderTime() {
+  
+
+  gameTimerEl.textContent = gameDuration - gameSecElapsed;
+  quesTimerEl.textContent = questionDuration - questionSecElapsed;
+
+  if ( (questionDuration - questionSecElapsed) < 1 ) {
+    
+    gameDuration -= 10;
+    if (test) { console.log("too slow"); }
+    presentQuestion();
+  } 
+
+  if ( (gameDuration - gameSecElapsed) < 1 ) {
+   endOfGame();
+  }
+}
+
+function startGameTimer () {
+  if (test) { console.log("--- startGameTimer ---"); }
+  setGameTime();
+
+  gameInterval = setInterval(function() {
+    gameSecElapsed++; 
+    questionSecElapsed++; 
+    renderTime();
+  }, 1000);
+}
+
+function stopTime() {
+  if (test) { console.log("--- stopTime --- ");}
+  gameSeconds = 0;
+  questionSeconds = 0;
+  clearInterval(gameInterval);
+}
