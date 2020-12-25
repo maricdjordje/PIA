@@ -338,3 +338,57 @@ function endOfGame() {
     }
   });
 }
+
+function highScores() {
+  stopTime();
+  clearDetails();
+
+  timerTab.setAttribute("style", "visibility: hidden;");
+
+  
+  let storedScores = JSON.parse(localStorage.getItem("highScores")); 
+
+  
+  let heading = document.createElement("h2");
+  heading.setAttribute("id", "main-heading");
+  heading.textContent = "Najbolje ostvareni rezultati";
+
+  mainEl.appendChild(heading);
+
+  
+  if ( storedScores !== null ) {
+    // sortira rezultate kviza
+    storedScores.sort((a,b) => (a.score < b.score) ? 1: -1);
+
+    
+    let numScores2Display = 10;
+    if ( storedScores.length < 10 ) { 
+      numScores2Display = storedScores.length; 
+    }
+
+    for (var i = 0; i < numScores2Display; i++) {
+      var s = storedScores[i];
+
+      var p = document.createElement("p");
+      p.textContent = s.name + " " + s.score + " ( " + s.type + " )";
+      mainEl.appendChild(p);
+    }
+  } else {
+    var p = document.createElement("p");
+    p.textContent =  "Unesite vaše ime!"
+    mainEl.appendChild(p);
+  }
+
+
+  // dugme da se krene sa igrom
+  let playAgain = document.createElement("button");
+  playAgain.setAttribute("id", "playAgain");
+  playAgain.setAttribute("class", "btn btn-secondary");
+  playAgain.textContent = "Klikni ovde da započneš kviz!";
+
+  mainEl.appendChild(playAgain);
+
+  playAgain.addEventListener("click", init);
+}
+
+highscoreDiv.addEventListener("click", highScores);
