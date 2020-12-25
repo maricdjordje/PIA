@@ -127,3 +127,66 @@ function presentQuestion() {
     endOfGame();
     return;
   }
+
+  
+  curQuestion = quiz.pop();
+
+  
+  clearDetails();
+   
+  
+  let question = document.createElement("h1");
+  
+  question.setAttribute("question", curQuestion.title);
+  question.textContent = curQuestion.title;
+  mainEl.appendChild(question)
+
+  
+  let choiceBox = document.createElement("ul");
+  choiceBox.setAttribute("id","choiceBox");
+  mainEl.appendChild(choiceBox);
+
+  
+  for( let i=0; i<curQuestion.choices.length; i++ ) {
+    
+    let listChoice = document.createElement("li");
+    
+    listChoice.setAttribute("choice-value", curQuestion.choices[i]);
+    listChoice.setAttribute("id","questionNum-"+i);
+    listChoice.textContent = curQuestion.choices[i];
+    
+    choiceBox.appendChild(listChoice)
+  }
+
+  if (test) { console.log("cur", curQuestion);}
+
+  
+  choiceBox.addEventListener("click", function (){
+    scoreAnswer(curQuestion);
+  });
+  
+}
+
+function scoreAnswer(cur) {
+  if (test) { console.log("--- scoreAnswer ---");}
+ 
+  var e = event.target;
+  if ( e.matches("li")) {
+    let selectedItem = e.textContent;
+    
+    if (test) { console.log("selectedItem quiz " + selectedItem); }
+    
+    if ( selectedItem === cur.answer ) {
+      
+      score += questionDuration - questionSecElapsed;
+      
+    } else {
+      if (test) { console.log("wrong answer");}
+      
+      gameDuration -= 10;
+    }
+  if (test) { console.log("sselected ",selectedItem);}
+    showAnswers(cur);
+    
+  }
+}
