@@ -80,3 +80,50 @@ function reset() {
   questionSecElapsed = 0;
   questionInterval;
 }
+
+
+function playQuiz(questionSet) {
+  if (test) { console.log("--- playQuiz ---"); }
+  
+  
+  quiz = setUpQuestions(questionSet);
+
+  
+  timerTab.setAttribute("style", "visibility: visible;");
+
+  
+  gameDuration = quiz.length * 20;
+  if (test) { console.log("duration g,q:",gameDuration,questionDuration); }
+
+  startGameTimer();
+  renderTime();
+
+  
+  presentQuestion();
+}
+
+
+function setUpQuestions(arr) {
+  if (test) {console.log("--- setUpQuestions ---");}
+
+  let ranQuest = [];
+
+  for (let i=0; i<arr.length; i++) {
+    ranQuest.push(arr[i]);
+  }
+  return ranQuest;
+}
+
+ 
+function presentQuestion() {
+  if (test) {console.log("--- presentQuestion ---");}
+  
+
+  
+  questionSecElapsed = 0;
+
+  
+  if ( quiz.length === 0 ) {
+    endOfGame();
+    return;
+  }
