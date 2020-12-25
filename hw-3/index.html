@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content= "width=device=width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
-    <link rel= "stylesheet"
-          href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
-    <link rel="styleesheet"
-          href="style.css">
-    <title> Programiranje internet aplikacija - domaci </title>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Programiranje internet aplikacija - domaći</title>
   </head>
   <body>
+    
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container-fluid">
+            <div id="highscore" class="nav-item nav-link"> Ostvareni rezultati</div>
+            <h1 id="navbar-title">JavaScript kviz</h1>
+            <table id=timers style="visibility: hidden;">
+              <tr>
+                <td>Ukupno preostalo vreme: </td>
+                <td> <span id="gameTimer" class="nav-item"></span> </td>
+              </tr>
+               <tr>
+                <td>Vreme preostalo za trenutno pitanje:</td>
+                <td> <span id="quesTimer" class="nav-item"></span> </td>
+              </tr>
+            </table>
+        </div>
+     
+    </nav>
+    
+    <div class="container-fluid">
+      
+      <section id="details"> </section>
+    </div>    
+ 
+  
+    <script src='questions.js'></script>
+    
+    <script src='script.js'></script>
   </body>
 </html>
