@@ -15,3 +15,24 @@ body {
 button {
   margin: 1em;
 }
+
+.navbar {
+  background-color: #73919b;  
+  color: #b6d7e2;  
+  
+  padding-bottom: 0;
+
+  
+  padding-left: 0;
+
+  
+  border-bottom: solid;
+  border-bottom-color: #ccc;
+  width: 100%;
+}
+
+#navbar-title {
+  padding: 15px;
+  font-size: 30px;
+  color: #fff !important; 
+}
